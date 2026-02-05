@@ -1,13 +1,15 @@
 <script setup>
+import { RouterLink } from 'vue-router'
+import suneCover from '@/assets/images/Illustration.png'
 </script>
 
 <template>
   <nav class="home-nav">
-    <router-link to="/" class="home-button">Home</router-link>
+    <RouterLink to="/" class="home-button">Home</RouterLink>
   </nav>
 
   <header class="page-header">
-    <img class="page-cover-image" src="../assets/images/Illustration.png" alt="Sune Cover" />
+    <img class="page-cover-image" :src="suneCover" alt="Sune Cover" />
   </header>
 
   <main class="container">
@@ -41,9 +43,6 @@
     </section>
   </main>
 </template>
-
-
-
 
 <style>
 .home-nav {

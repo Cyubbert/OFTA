@@ -1,4 +1,5 @@
 <script setup>
+import norrunCover from "@/assets/images/Map.png";
 </script>
 
 <template>
@@ -7,12 +8,19 @@
   </nav>
 
   <header class="page-header">
-    <img class="page-cover-image" src="../assets/images/Map.png" alt="Norrun Cover" />
+    <img class="page-cover-image" :src="norrunCover" alt="Norrun Cover" />
   </header>
 
   <main class="container">
     <h1>Norrun</h1>
     <section class="section">
+
+
+      <p>Norrun consists of 5 well established Kingdoms each ruled by a Strong individual. Each Ruler of a Kingdom are far relatives of Radoon’s most trusted People. Most currently at the 7th Generation.</p>
+
+      <p>There have been some Wars going on between each Kingdom trying to overtake the other but it all just ended in nothing. So most came to an agreement to support each other instead of fighting. There are still conflicts between certain Kingdoms. Most known one is the strong dislike that Duweil’s and Letlon’s people hold for each other.</p>
+
+
       <h2>History of Norrun</h2>
 
       <p>
@@ -93,11 +101,12 @@
         beliefs from that.
       </p>
     </section>
-    <img src="../assets/images/Map.png" class="map-again" alt="Map of Norrun" />
+
+    <img :src="norrunCover" class="map-again" alt="Map of Norrun" />
   </main>
 </template>
 
-<style>
+<style scoped>
 .home-nav {
   position: sticky;
   top: 0;

@@ -11,12 +11,12 @@ const routes = [
   { path: "/world/norrun", component: NorrunView },
   { path: "/world/sune", component: SuneView },
   { path: "/world/liira", component: LiiraView },
-  { path: "/world/talona", component: TalonaView },
+  { path: "/world/talona", component: TalonaView }
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes,
+  routes
 });
 
 export default router;

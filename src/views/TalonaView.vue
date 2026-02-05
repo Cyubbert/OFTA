@@ -1,24 +1,16 @@
 <script setup>
-
-
-import talonaCover from "@/assets/images/2.png";
+import { RouterLink } from 'vue-router'
+import talonaCover from '@/assets/images/2.png'
 </script>
 
 <template>
-
   <nav class="home-nav">
-    <router-link to="/" class="home-button">Home</router-link>
+    <RouterLink to="/" class="home-button">Home</RouterLink>
   </nav>
 
-
   <header class="page-header">
-    <img
-        class="page-cover-image"
-        :src="talonaCover"
-        alt="Talona Cover"
-    />
+    <img class="page-cover-image" :src="talonaCover" alt="Talona Cover" />
   </header>
-
 
   <main class="container">
     <h1>Talona</h1>

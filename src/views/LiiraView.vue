@@ -1,16 +1,11 @@
 <script setup>
-import { defineProps } from "vue";
-
-
 import liiraCover from "@/assets/images/Liira.png";
 </script>
 
 <template>
-
   <nav class="home-nav">
     <router-link to="/" class="home-button">Home</router-link>
   </nav>
-
 
   <header class="page-header">
     <img
@@ -19,7 +14,6 @@ import liiraCover from "@/assets/images/Liira.png";
         alt="Liira Cover"
     />
   </header>
-
 
   <main class="container">
     <h1>Liira</h1>
@@ -51,8 +45,7 @@ import liiraCover from "@/assets/images/Liira.png";
   </main>
 </template>
 
-<style>
-
+<style scoped>
 .home-nav {
   position: sticky;
   top: 0;
@@ -77,14 +70,12 @@ import liiraCover from "@/assets/images/Liira.png";
   color: #121212;
 }
 
-
 .page-cover-image {
   width: 100%;
   max-height: 30vh;
   object-fit: cover;
   filter: brightness(0.75);
 }
-
 
 .container {
   max-width: 900px;
