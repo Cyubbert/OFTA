@@ -1,26 +1,17 @@
 <script setup>
-
 </script>
 
 <template>
-
   <nav class="home-nav">
     <router-link to="/" class="home-button">Home</router-link>
   </nav>
 
-
   <header class="page-header">
-    <img
-        class="page-cover-image"
-        src="/src/assets/images/Map.png"
-        alt="Norrun Cover"
-    />
+    <img class="page-cover-image" src="../assets/images/Map.png" alt="Norrun Cover" />
   </header>
-
 
   <main class="container">
     <h1>Norrun</h1>
-
     <section class="section">
       <h2>History of Norrun</h2>
 
@@ -102,17 +93,11 @@
         beliefs from that.
       </p>
     </section>
-
-    <img
-        src="/src/assets/images/Map.png"
-        class="map-again"
-        alt="Map of Norrun"
-    />
+    <img src="../assets/images/Map.png" class="map-again" alt="Map of Norrun" />
   </main>
 </template>
 
 <style>
-
 .home-nav {
   position: sticky;
   top: 0;
@@ -163,6 +148,7 @@ h2 {
 p {
   margin-bottom: 1.2rem;
   line-height: 1.6;
+  color: #e0e0e0;
 }
 
 .map-again {

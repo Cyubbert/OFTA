@@ -1,5 +1,8 @@
 <script setup>
+import { defineProps } from "vue";
 
+
+import liiraCover from "@/assets/images/Liira.png";
 </script>
 
 <template>
@@ -12,7 +15,7 @@
   <header class="page-header">
     <img
         class="page-cover-image"
-        src="/src/assets/images/Liira.png"
+        :src="liiraCover"
         alt="Liira Cover"
     />
   </header>
@@ -46,7 +49,6 @@
       </p>
     </section>
   </main>
-
 </template>
 
 <style>

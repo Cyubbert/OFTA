@@ -1,5 +1,7 @@
 <script setup>
 
+
+import talonaCover from "@/assets/images/2.png";
 </script>
 
 <template>
@@ -12,7 +14,7 @@
   <header class="page-header">
     <img
         class="page-cover-image"
-        src="/src/assets/images/2.png"
+        :src="talonaCover"
         alt="Talona Cover"
     />
   </header>
@@ -47,7 +49,6 @@
 </template>
 
 <style>
-
 .home-nav {
   position: sticky;
   top: 0;
@@ -72,14 +73,12 @@
   color: #121212;
 }
 
-
 .page-cover-image {
   width: 100%;
   max-height: 30vh;
   object-fit: cover;
   filter: brightness(0.75);
 }
-
 
 .container {
   max-width: 900px;

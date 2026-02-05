@@ -1,19 +1,13 @@
 <script setup>
-
 </script>
 
 <template>
-
   <nav class="home-nav">
     <router-link to="/" class="home-button">Home</router-link>
   </nav>
 
   <header class="page-header">
-    <img
-        class="page-cover-image"
-        src="/src/assets/images/Illustration.png"
-        alt="Sune Cover"
-    />
+    <img class="page-cover-image" src="../assets/images/Illustration.png" alt="Sune Cover" />
   </header>
 
   <main class="container">
@@ -48,8 +42,10 @@
   </main>
 </template>
 
-<style>
 
+
+
+<style>
 .home-nav {
   position: sticky;
   top: 0;
@@ -73,7 +69,6 @@
   background-color: #90caf9;
   color: #121212;
 }
-
 
 .page-cover-image {
   width: 100%;

@@ -1,78 +1,63 @@
 <script setup>
-import { onMounted } from "vue";
-import { useWorldStore } from "../stores/worldStore";
-import WorldCard from "../components/WorldCard.vue";
+import cover from '@/assets/images/AUGH.png'
+import norrun from '@/assets/images/Map.png'
+import talona from '@/assets/images/2.png'
+import liira from '@/assets/images/Liira.png'
+import sune from '@/assets/images/Illustration.png'
 
-const store = useWorldStore();
-onMounted(store.fetchWorld);
+const coverImage = cover
+const norrunIcon = norrun
+const talonaIcon = talona
+const liiraIcon = liira
+const suneIcon = sune
 </script>
 
 <template>
-
-
   <article class="page sans">
-
     <header>
-      <img
-          class="page-cover-image"
-          src="/src/assets/images/AUGH.png"
-          alt="Cover image"
-      />
-
+      <img class="page-cover-image" :src="coverImage" alt="Cover image" />
       <h1 class="page-title">Out for the Ancients</h1>
     </header>
 
     <div class="page-body">
       <div class="column-list">
 
-
         <div class="column column-small">
           <figure class="source">
             <iframe
                 src="https://open.spotify.com/embed/playlist/3Frb2hSA7fBOCn4m5KpPoY"
-                width="100%"
-                height="380"
-                frameborder="0"
-                allowtransparency="true"
-                allow="encrypted-media">
-            </iframe>
-
+                width="100%" height="380" frameborder="0"
+                allowtransparency="true" allow="encrypted-media"
+            ></iframe>
             <button>
-              <a
-                  href="https://music.youtube.com/playlist?list=PLRb4N-m6OwfERLsSso2N09yZeNElRS8l4&si=1sP0Oqfo4yXKEoUg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-              >
-                Youtube Playlist
-              </a>
+              <a href="https://music.youtube.com/playlist?list=PLRb4N-m6OwfERLsSso2N09yZeNElRS8l4&si=1sP0Oqfo4yXKEoUg"
+                 target="_blank">Youtube Playlist</a>
             </button>
           </figure>
         </div>
 
-
         <div class="column column-large">
           <section class="collection-content">
-            <h3 class="collection-title">World &amp; Deities</h3>
-
+            <h3 class="collection-title">World & Deities</h3>
             <div class="cards-container">
 
               <router-link to="/world/norrun" class="card">
-                <img src="/src/assets/images/Map.png" alt="Norrun Icon">
+                <img :src="norrunIcon" alt="Norrun Icon" />
                 <div class="card-name">Norrun</div>
               </router-link>
 
               <router-link to="/world/talona" class="card">
-                <img src="/src/assets/images/2.png" alt="Talona Icon">
+                <img :src="talonaIcon" alt="Talona Icon" />
                 <div class="card-name">Talona</div>
               </router-link>
 
               <router-link to="/world/liira" class="card">
-                <img src="/src/assets/images/Liira.png" alt="Liira Icon">
+                <img :src="liiraIcon" alt="Liira Icon" />
                 <div class="card-name">Liira</div>
               </router-link>
 
               <router-link to="/world/sune" class="card">
-                <img src="/src/assets/images/Illustration.png" alt="Sune Icon">
+                <img :src="suneIcon" alt="Sune Icon" />
                 <div class="card-name">Sune</div>
               </router-link>
 
@@ -82,14 +67,11 @@ onMounted(store.fetchWorld);
 
       </div>
     </div>
-
   </article>
-
-
 </template>
 
-
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -118,7 +100,6 @@ body {
   text-align: center;
 }
 
-/* ===== COLUMNS ===== */
 .column-list {
   display: flex;
   gap: 2rem;
@@ -137,14 +118,13 @@ body {
   border-radius: 6px;
   padding: 1.2rem;
   background-color: #1e1e1e;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   margin-bottom: 1rem;
 }
 
 .source iframe {
   border-radius: 6px;
 }
-
 
 button {
   background-color: #90caf9;
@@ -168,7 +148,6 @@ button a {
   display: inline-block;
 }
 
-
 .collection-title {
   margin-bottom: 0.5rem;
   color: #ffffff;
@@ -186,7 +165,7 @@ button a {
   height: 180px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -202,22 +181,20 @@ button a {
   width: 100%;
   text-align: center;
   padding: 0.4rem 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
   color: #ffffff;
   font-weight: 600;
 }
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
 }
-
 
 a {
   color: #90caf9;
   text-decoration: underline;
 }
-
 
 @media (min-width: 1200px) {
   .cards-container {
@@ -230,8 +207,7 @@ a {
     flex-direction: column;
   }
 
-  .column-small,
-  .column-large {
+  .column-small, .column-large {
     width: 100%;
   }
 }
